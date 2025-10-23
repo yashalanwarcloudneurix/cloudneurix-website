@@ -1,0 +1,146 @@
+/* aboutpage1.css - styles for AboutPage1 component */
+
+:root{
+  --bg:#f3fcff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --accent:#0ea5b5; /* teal */
+  --cta:#0369a1; /* blue */
+  --card-bg: #ffffff;
+  --radius: 12px;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 6%;
+  background: linear-gradient(180deg, var(--bg), #effcff 60%);
+  color: var(--text);
+  min-height: 70vh;
+  box-sizing: border-box;
+  font-family: Inter, "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Left column - text */
+.about-left {
+  flex: 1;
+  max-width: 720px;
+}
+
+.heading {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.headline {
+  font-size: 50px;
+  line-height: 1.15;
+  margin: 8px 0 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.intro {
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.cta {
+  margin-top: 18px;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--cta), #0ea5b5);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(2,6,23,0.12);
+}
+
+/* Right column - stats + images */
+.about-right {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* stat card */
+.stat-card {
+  background: var(--card-bg);
+  width: 100%;
+  border-radius: var(--radius);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.06);
+}
+
+.stat-circle {
+  background: linear-gradient(180deg,#0ea5b5,#0369a1);
+  color: white;
+  font-weight: 700;
+  border-radius: 100px;
+  min-width: 84px;
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 18px rgba(3,105,161,0.18);
+}
+
+.stat-text {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* stacked images */
+.image-stack {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: center;
+}
+
+.img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(2,6,23,0.06);
+  background: #fff;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* small screens */
+@media (max-width: 980px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 40px 5%;
+    gap: 28px;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}

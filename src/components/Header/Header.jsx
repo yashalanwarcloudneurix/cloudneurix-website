@@ -16,11 +16,11 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hdr__nav">
-          <a className="active" href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#insights">Insights</a>
+          <a className="active" href="/home">Home</a>
+          <a href="/about">About Us</a>
+          <a href="/services">Services</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/insights">Insights</a>
         </nav>
 
         {/* CTAs */}

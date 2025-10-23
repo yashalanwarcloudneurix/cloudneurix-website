@@ -1,9 +1,9 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Working from "./components/Working/working";
 import Header from "./components/Header/Header";
 import "./index.css";
-// import Navbar from "./components/Navbar";
-// import Hero from "./components/Hero";
-// import Logos from "./components/Logos";
 import Page1 from "./components/Homeweb/page1";
 import Page2 from "./components/Homeweb/page2";
 import Page3 from "./components/Homeweb/page3";
@@ -13,25 +13,29 @@ import Page6 from "./components/Homeweb/page6";
 import Page7 from "./components/Homeweb/page7";
 import Page8 from "./components/Homeweb/page8";
 import Page9 from "./components/Homeweb/page9";
+import AboutPage1 from "./components/About Us/aboutpage1";
+import AboutPage2 from "./components/About Us/aboutpage2";
+
 
 
 
 export default function App() {
   return (
     <div className="page">
-      <Header />
       <main>
-        {/* <Hero /> */}
-        {/* <Logos /> */}
-        <Page1 />
-        <Page2 />
-        <Page3 />
-        <Page4 />
-        <Page5 />
-        <Page6 />
-        <Page7 />
-        <Page8 />
-        <Page9 />
+        <Router>
+          <Routes>
+                <Route 
+                path="/home" 
+                element={<><Header /><Page1 /><Page2 /><Page3 /><Page4 /><Page5 /><Page6 /><Page7 /><Page8 /><Page9 /></>} />
+                <Route 
+                path="/about" 
+                element={<><Header /><AboutPage1 /><AboutPage2 /><Page8 /><Page9 /></>} />
+                <Route 
+                path="/services" 
+                element={<><Header /><Page2 /><Page8 /><Page9 /></>} />
+          </Routes>
+    </Router>
       </main>
     </div>
   );
