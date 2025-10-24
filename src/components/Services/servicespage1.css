@@ -1,0 +1,66 @@
+.image-container {
+    background-color: #edfbff;
+    color: #000;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-top: 10%;
+    margin-bottom: 0%;
+}
+.head h1{
+    color: #000;
+}
+/* .services-container h1{
+    color: #000;
+    font-size: 200%;
+    background-color: #edfbff;
+
+}
+.services-container header{
+    color: #000;
+    font-size: 200%;
+    background-color: #edfbff;
+} */
+/* servicespage1.css */
+.service-banner {
+  /* background-image: url("../assets/service-bg.jpg"); your image path */
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  color: white;
+  margin-bottom: 0%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: #00000066;
+  padding: 35px;
+  border-radius: 10px;
+  height: 75%;
+  margin-top: 3%;
+    /* margin-bottom: 90px; */
+}
+
+/* .overlay-text button{
+    background-color: aqua;
+} */
+.cta {
+  margin-top: 5px;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--cta), #0ea5b5);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(2,6,23,0.12);
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Working from "./components/Working/working";
 import Header from "./components/Header/Header";
 import "./index.css";
 import Page1 from "./components/Homeweb/page1";
@@ -15,6 +14,10 @@ import Page8 from "./components/Homeweb/page8";
 import Page9 from "./components/Homeweb/page9";
 import AboutPage1 from "./components/About Us/aboutpage1";
 import AboutPage2 from "./components/About Us/aboutpage2";
+import AboutPage3 from "./components/About Us/aboutpage3";
+import ServicesPage1 from "./components/Services/servicespage1";
+
+
 
 
 
@@ -30,10 +33,10 @@ export default function App() {
                 element={<><Header /><Page1 /><Page2 /><Page3 /><Page4 /><Page5 /><Page6 /><Page7 /><Page8 /><Page9 /></>} />
                 <Route 
                 path="/about" 
-                element={<><Header /><AboutPage1 /><AboutPage2 /><Page8 /><Page9 /></>} />
+                element={<><Header /><AboutPage1 /><AboutPage2 /><AboutPage3/><Page8 /><Page9 /></>} />
                 <Route 
                 path="/services" 
-                element={<><Header /><Page2 /><Page8 /><Page9 /></>} />
+                element={<><Header /><ServicesPage1/><Page2 /><Page8 /><Page9 /></>} />
           </Routes>
     </Router>
       </main>
