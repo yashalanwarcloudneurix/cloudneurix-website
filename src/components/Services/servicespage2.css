@@ -1,0 +1,175 @@
+:root{
+  --panel-top: #eef7ff;
+  --panel-bottom: #ffffff;
+  --panel-border: rgba(15,23,36,0.06);
+  --panel-shadow: 0 18px 50px rgba(16,24,40,0.06);
+  --text: #0f1724;
+  --muted: #6b7280;
+  --accent: #2ea3ff;
+  --icon-bg: rgba(46,163,255,0.12);
+}
+
+/* Wrapper */
+.p2 {
+  padding: 48px 20px 120px; /* room for overlapping CTA */
+  display: flex;
+  justify-content: center;
+  background: #02040a;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* The card-like panel */
+.p2__shell {
+  width: 100%;
+  max-width: 1080px;
+  background: linear-gradient(180deg, var(--panel-top) 0%, var(--panel-bottom) 45%);
+  border-radius: 18px;
+  border: 1px solid var(--panel-border);
+  padding: 34px 30px 80px; /* extra bottom padding for CTA overlap */
+  box-shadow: var(--panel-shadow);
+  position: relative;
+  overflow: visible;
+}
+
+/* Header */
+.p2__head {
+  text-align: center;
+  margin-bottom: 26px;
+}
+.p2__title {
+  margin: 0;
+  font-size: clamp(20px, 2.6vw, 28px);
+  color: var(--text);
+  line-height: 1.1;
+  font-weight: 700;
+}
+.p2__accent {
+  color: var(--accent);
+}
+.p2__subtitle {
+  margin: 10px auto 0;
+  color: var(--muted);
+  max-width: 740px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Grid: 2 columns on desktop, 1 on small screens */
+.p2__grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Card */
+.p2__card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(15,23,36,0.04);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Hover lift */
+.p2__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16,24,40,0.08);
+  border-color: rgba(15,23,36,0.06);
+}
+
+/* Icon circle */
+.p2__icon {
+  width: 56px;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background: var(--icon-bg);
+  color: var(--accent);
+  border: 1px solid rgba(46,163,255,0.18);
+}
+
+/* Card text */
+.p2__cardTitle {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 700;
+}
+.p2__cardDesc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* CTA pill centered and overlapping the bottom */
+.p2__ctaWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+  position: relative;
+  z-index: 2;
+}
+.p2__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: var(--accent);
+  color: #031022;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(46,163,255,0.16);
+  transform: translateY(32px); /* overlap effect */
+  transition: transform .15s ease, box-shadow .18s ease;
+}
+.p2__cta:hover {
+  transform: translateY(28px);
+  box-shadow: 0 18px 40px rgba(46,163,255,0.22);
+}
+
+/* Decorative bottom glow/notch */
+.p2__notch {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -34px;
+  width: 220px;
+  height: 44px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(46,163,255,0.14), rgba(46,163,255,0.02));
+  filter: blur(10px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .p2__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .p2__card { padding: 16px; }
+  .p2__icon { width: 48px; height: 48px; min-width: 48px; border-radius: 10px; font-size: 18px; }
+  .p2__cta { transform: translateY(18px); }
+  .p2__notch { bottom: -24px; width: 160px; height: 36px; }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .p2__shell { padding: 22px 16px 64px; border-radius: 14px; }
+  .p2__title { font-size: 18px; }
+  .p2__subtitle { font-size: 13px; }
+  .p2__cardDesc { font-size: 13px; }
+  .p2__icon { width: 44px; height: 44px; min-width: 44px; }
+  .p2__cta { padding: 10px 16px; font-size: 14px; transform: translateY(14px); }
+}

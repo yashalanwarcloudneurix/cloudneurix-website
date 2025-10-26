@@ -16,6 +16,8 @@ import AboutPage1 from "./components/About Us/aboutpage1";
 import AboutPage2 from "./components/About Us/aboutpage2";
 import AboutPage3 from "./components/About Us/aboutpage3";
 import ServicesPage1 from "./components/Services/servicespage1";
+import ServicesPage2 from "./components/Services/servicespage2";
+
 
 
 
@@ -36,7 +38,7 @@ export default function App() {
                 element={<><Header /><AboutPage1 /><AboutPage2 /><AboutPage3/><Page8 /><Page9 /></>} />
                 <Route 
                 path="/services" 
-                element={<><Header /><ServicesPage1/><Page2 /><Page8 /><Page9 /></>} />
+                element={<><Header /><ServicesPage1/><ServicesPage2 /><Page8 /><Page9 /></>} />
           </Routes>
     </Router>
       </main>
